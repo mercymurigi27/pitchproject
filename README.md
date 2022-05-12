@@ -1,5 +1,5 @@
 # NEWS APP
-#### By Mercy Murigi, May 2, 2022
+#### By Mercy Murigi, May 10, 2022
 ### This is an application that lets user pitch in 60seconds.
 
 ## Table of Contents
