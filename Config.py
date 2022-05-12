@@ -2,20 +2,20 @@ import os
 
 class Config:
     SECRET_KEY = 'kittenarecute'
-    SQLALCHEMY_TRACK_MODIFICATION = True
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1234 @localhost/pitch'
+    SQLALCHEMY_TRACK_MODIFICATIONS=True
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
     
     #  email configurations
-    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_USERNAME = 'pitchesip@gmail.com'
+    MAIL_PASSWORD = 'pitches123'
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1234 @localhost\p/pitch'
 
 class ProdConfig(Config):
     pass

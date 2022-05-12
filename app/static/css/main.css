@@ -5,5 +5,5 @@ body {
     padding: 0;
     /*background: #230e4a;*/
     z-index: 1;
-    background: linear-gradient(to bottom right, #230e4a, black);
+    /* background: linear-gradient(to bottom right, #230e4a, black); */
 }

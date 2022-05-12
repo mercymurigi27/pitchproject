@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for,abort,request
 from . import main
 from flask_login import login_required,current_user
-from ..models import User,Pitch,Comment,Upvote,Downvote
+from ..models import User,Pitch,Comment
 from .form import UpdateProfile,PitchForm,CommentForm
 from .. import db,photos
 
@@ -13,14 +13,14 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    pitches = Pitch.query.all()
-    Interviews = Pitch.query.filter_by(category = 'interviews').all() 
+    Pitches = Pitch.query.all()
+    Interviews = Pitch.query.filter_by(category = 'Interviews').all() 
     Business = Pitch.query.filter_by(category = 'Business').all()
-    enterpreneurship = Pitch.query.filter_by(category = 'enterpreneurship').all()
+    enterpreneurship = Pitch.query.filter_by(category = 'Enterpreneurship').all()
 
 
 
-    return render_template('index.html','Business=Business','interviews=interviews','enterpreneurship=enterpreneurship')
+    return render_template('index.html', Business=Business,Interviews=Interviews,enterpreneurship=enterpreneurship, Pitches=Pitches)
 
     
     
