@@ -1,9 +1,16 @@
+
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
 
+
+{% block styles %}
+   {{super()}}
+   <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock%}
+ 
 {% block content %}
     
-        <div  class="container" id="particles-js">
+        <div  class="container" id="particles-js" >
                 <h2 class="text-center" id="posts">All Pitches</h2>
             <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
                 <li class="nav-item" >
@@ -16,21 +23,21 @@
                   <a class="nav-link" id ="cats" data-toggle="tab" href="#business">Business Pitches</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id ="cats"data-toggle="tab" href="#enter">Enterpreneurship Pitches</a>
+                  <a class="nav-link" id ="cats"data-toggle="tab" href="#enterpreneurship">Enterpreneurship Pitches</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div  class="container tab-pane active" id="all"><br>
-                    {{ macro.display(pitches) }}
+                <div  class="container tab-pane active" id="all">
+                    {{ macro.display(Pitches) }}
                 </div>
-                <div  class="container tab-pane fade" id="Interviews"><br>
+                <div  class="container tab-pane fade" id="interviews">
                     {{ macro.display(Interviews)}}
                 </div>
-                <div  class="container tab-pane fade" id="Business"><br>
+                <div  class="container tab-pane fade" id="business">
                     {{ macro.display(Business) }}
                 </div>
-                <div  class="container tab-pane fade" id="Enterpreneurship"><br>
-                    {{ macro.display(Enterpreneurship)}}
+                <div  class="container tab-pane fade" id="enterpreneurship">
+                    {{ macro.display(enterpreneurship)}}
                     
                 </div>
             </div>

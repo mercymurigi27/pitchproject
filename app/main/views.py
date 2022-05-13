@@ -16,7 +16,7 @@ def index():
     Pitches = Pitch.query.all()
     Interviews = Pitch.query.filter_by(category = 'Interviews').all() 
     Business = Pitch.query.filter_by(category = 'Business').all()
-    enterpreneurship = Pitch.query.filter_by(category = 'Enterpreneurship').all()
+    enterpreneurship = Pitch.query.filter_by(category = 'enterpreneurship').all()
 
 
 
